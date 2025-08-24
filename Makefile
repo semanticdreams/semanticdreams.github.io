@@ -8,3 +8,6 @@ build:
 
 preview:
 	pnpm run docs:preview
+
+push:
+	git add -A && git commit -m "Update" && git push

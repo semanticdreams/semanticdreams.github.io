@@ -6,9 +6,9 @@ yarn-error.log*
 pnpm-debug.log*
 
 # VitePress
-.vitepress/dist/   # build output
-.vitepress/cache/  # cache
-.temp/             # temporary files
+.vitepress/dist/
+.vitepress/cache/
+.temp/
 
 # Local environment files
 .env
