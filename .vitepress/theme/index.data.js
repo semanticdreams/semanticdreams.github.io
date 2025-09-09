@@ -32,7 +32,7 @@ function formatDate(raw) {
         string: date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'short',
-            day: 'numeric'
+            day: '2-digit'
         })
     }
 }

@@ -1,1 +1,5 @@
-# semanticdreams.github.io
+# semanticdreams.com
+
+```
+make dev
+```
