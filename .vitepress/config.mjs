@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,8 +12,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
     nav: [
-      { text: 'Blog', link: '/' },
-      { text: 'Projects', link: '/projects' },
+      { text: 'Posts', link: '/' },
+      { text: 'Projects', link: '/projects/' },
       { text: 'About', link: '/about' },
     ],
     search: {
@@ -23,6 +24,8 @@ export default defineConfig({
         '/projects/space/': [
             { text: 'space', items: [
                 { text: 'Overview', link: '/projects/space/' },
+                { text: 'Concepts', link: '/projects/space/concepts' },
+                { text: 'Devlog', link: '/projects/space/devlog' },
             ]}
         ]
     },
@@ -35,8 +38,12 @@ export default defineConfig({
     }
   },
   markdown: {
+    math: true,
     image: {
       lazyLoading: true
+    },
+    config: (md) => {
+      md.use(footnote)
     }
   }
 })

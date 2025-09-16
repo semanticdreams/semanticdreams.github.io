@@ -2,5 +2,9 @@
 
 ![Logo](/logo.png)
 
-Posts in the blog are incrementally updated notes, not finished articles.
+Posts are incrementally updated notes, not finished articles.
 LLM-generated content is explicitly marked as such.
+
+## Contact
+
+Email: <a href='mailto:hello@semanticdreams.com'>hello@semanticdreams.com</a>

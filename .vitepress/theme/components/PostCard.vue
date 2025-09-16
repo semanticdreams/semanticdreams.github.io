@@ -3,11 +3,11 @@
     <small class="shrink-0 pt-1">
       {{ date }}
     </small>
-    <div class="flex flex-col gap-1">
-      <a :href="href" class="text-xl font-bold">
+    <div class="flex flex-col gap-0">
+      <a :href="href" class="text-base font-bold">
         {{ title }}
       </a>
-      <div class="m-0 p-0 text-l">
+      <div class="m-0 p-0 text-sm">
         <p class="m-0 p-0 inline">{{ excerpt }}</p>
       </div>
     </div>

@@ -12,8 +12,9 @@ date: 2025-08-28
 
 Create files `hqx` and `bqx` in `/usr/share/X11/xkb/symbols/`.
 
-hqx:
-```
+::: code-group
+
+``` [hqx]
 default
 partial alphanumeric_keys modifier_keys 
 
@@ -87,8 +88,7 @@ xkb_symbols "hqx" {
 };
 ```
 
-bqx:
-```
+``` [bqx]
 default
 partial alphanumeric_keys modifier_keys 
 
@@ -161,7 +161,7 @@ xkb_symbols "bqx" {
     include "level3(ralt_switch)"
 };
 ```
-
+:::
 
 Run `rm /var/lib/xkb/* -rf`.
 `setxkbmap hqx` and `setxkbmap bqx` should now work.

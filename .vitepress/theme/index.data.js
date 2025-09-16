@@ -9,7 +9,7 @@ export default createContentLoader('posts/*.md', {
             .map((page) => ({
                 title: page.frontmatter.title,
                 url: page.url,
-                excerpt: truncateText(page.frontmatter.description, 100),
+                excerpt: truncateText(page.frontmatter.description || '', 100),
                 date: formatDate(page.frontmatter.date),
                 image: getImagePath(page.url)
             }))
