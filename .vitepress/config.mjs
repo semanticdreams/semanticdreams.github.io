@@ -34,7 +34,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/semanticdreams' }
     ],
     footer: {
-        message: "Contact me via email at <a href='mailto:hello@semanticdreams.com'>hello@semanticdreams.com</a>."
+        message: "Contact me via email at <a href='mailto:hello@semanticdreams.com'>hello@semanticdreams.com</a>. Join the community on <a href='https://matrix.to/#/#semanticdreams42:matrix.org' target='_blank'>Matrix</a>."
     }
   },
   markdown: {

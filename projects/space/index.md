@@ -5,3 +5,4 @@
 Find the code repository on [GitHub](https://github.com/semanticdreams/space).  
 Learn about the [concepts](./concepts) inspiring this project.  
 Follow development progress in the [devlog](./devlog).  
+Discuss this project on [Matrix](https://matrix.to/#/#semanticdreams42:matrix.org).
