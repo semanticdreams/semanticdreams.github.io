@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col md:flex-row w-full gap-x-4 gap-y-1">
-    <small class="shrink-0 pt-1">
+  <div class="flex flex-col md:flex-row w-full gap-x-3">
+    <small class="shrink-0 pt-1 w-24 md:text-right">
       {{ date }}
     </small>
     <div class="flex flex-col gap-0">
