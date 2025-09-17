@@ -31,6 +31,11 @@ Substance Use By Professional Programmers](https://www.researchgate.net/publicat
 - [What is Psychedelic Integration?](https://www.mindbloom.com/blog/what-is-psychedelic-integration)
 - [Psychedelic integration: An analysis of the concept and its practice](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.824077/full)
 
+## Websites
+
+- [The Psychedelic Library](https://www.psychedelic-library.org/)  
+Collection of papers and books on psychedelics.
+
 ## Documentaries
 
 - [The Mind Explained: “Psychedelics”](https://www.imdb.com/title/tt10948426/) (2019)
