@@ -1,13 +1,19 @@
 # Devlog
 
-## 2025-09-17
+## 2025-09-24
+Changed to load classes in Python prototype directly from z folder rather than through DB-based entities
+to avoid a strange system-dependent problem.
+As a result, editing class entities from within the prototype world will no longer work.
+Prototype is reaching its end of life so this is ok.
 
+Fixed fbo update issue by updating Lua's fbo handle on viewport change.
+
+## 2025-09-17
 Fennel implementation has basic triangle renderering and initial UI code (rectangles, layout, widget).
 Output is rendered to a framebuffer displayed on a texture within the scene created by the prototype.
 Entities will be file-based.
 
 ## 2025-09-16
-
 In the process of replacing Python prototype with C++/Fennel implementation.
 Prototype has skybox, line, triangle, text (msdf), image, point, mesh and sub-world **renderers**.
 **UI layout system** has measure pass and layout pass. Layout nodes have to be assembled manually,

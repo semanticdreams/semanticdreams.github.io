@@ -1,6 +1,6 @@
 # Concepts
 
-space is a novel type of operating system interface based on the following concepts.
+space is a novel type of computing interface based on the following concepts.
 
 ## 3D
 
