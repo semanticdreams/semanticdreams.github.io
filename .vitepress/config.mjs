@@ -116,7 +116,7 @@ export default defineConfig({
           })
       }
 
-      //writeFileSync(path.join(config.outDir, 'rss.xml'), feed.rss2())
+      writeFileSync(path.join(config.outDir, 'rss.xml'), feed.rss2())
       writeFileSync(path.join(config.outDir, 'atom.xml'), feed.atom1())
   }
 })
