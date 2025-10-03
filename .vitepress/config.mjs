@@ -87,10 +87,10 @@ export default defineConfig({
           ],
       })
 
-      const posts = await createContentLoader('posts/*.md', {
+      const posts = (await createContentLoader('posts/*.md', {
           excerpt: true,
           render: true
-      }).load()
+      }).load()).filter((page) => !page.frontmatter?.draft)
 
       posts.sort(
           (a, b) =>
