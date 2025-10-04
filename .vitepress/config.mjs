@@ -98,16 +98,16 @@ export default defineConfig({
           +new Date(a.frontmatter.date)
       )
 
-      const sanitize = (str = '') =>
-          str.replace(/[\u200B-\u200D\uFEFF]/g, '')
+      const stripHeaderAnchors = (html = '') =>
+          html.replace(/\s*<a[^>]*class=["']header-anchor["'][^>]*>.*?<\/a>/gi, '')
 
       for (const { url, excerpt, frontmatter, html } of posts) {
           feed.addItem({
               title: frontmatter.title,
               id: `${hostname}${url}`,
               link: `${hostname}${url}`,
-              description: sanitize(excerpt),
-              content: sanitize(html),
+              description: excerpt,
+              content: stripHeaderAnchors(html),
               author: [
                   {
                       name: 'semanticdreams',
