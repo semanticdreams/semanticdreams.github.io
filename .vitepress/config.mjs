@@ -98,13 +98,16 @@ export default defineConfig({
           +new Date(a.frontmatter.date)
       )
 
+      const sanitize = (str = '') =>
+          str.replace(/[\u200B-\u200D\uFEFF]/g, '')
+
       for (const { url, excerpt, frontmatter, html } of posts) {
           feed.addItem({
               title: frontmatter.title,
               id: `${hostname}${url}`,
               link: `${hostname}${url}`,
-              description: excerpt,
-              content: html,
+              description: sanitize(excerpt),
+              content: sanitize(html),
               author: [
                   {
                       name: 'semanticdreams',
