@@ -115,7 +115,8 @@ export default defineConfig({
                       link: 'https://semanticdreams.com'
                   }
               ],
-              date: frontmatter.date
+              date: frontmatter.date,
+              //image:
           })
       }
 
