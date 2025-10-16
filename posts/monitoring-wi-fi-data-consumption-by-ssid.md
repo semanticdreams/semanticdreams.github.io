@@ -132,7 +132,7 @@ echo "* * * * * root /usr/local/bin/wifi_usage_poll.sh" | sudo tee /etc/cron.d/w
 
 ## Output
 
-Add script to `~/.local/bin/wifi-usage` and make executable with `chmod +x ~/.local/bin/wifi-usage`.
+Add script to `~/.local/bin/wifi-usage` and make it executable with `chmod +x ~/.local/bin/wifi-usage`.
 
 ```bash
 #!/bin/bash
