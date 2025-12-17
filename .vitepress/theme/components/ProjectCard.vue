@@ -1,5 +1,10 @@
 <template>
-  <a :href="href" class="w-full">
+  <a
+    :href="linkHref"
+    :target="isExternal ? '_blank' : undefined"
+    :rel="isExternal ? 'noopener noreferrer' : undefined"
+    class="w-full"
+  >
     <div class="p-1 flex md:flex-row w-full gap-2 rounded-2xl border-2 border-[var(--vp-c-border)] hover:bg-[var(--vp-c-bg-soft)]">
         <img class="m-1 w-12 h-12 sm:w-12 sm:h-12 aspect-square" :src="withBase(image)" :alt="title" />
       <div class="flex flex-col gap-0">
@@ -16,8 +21,9 @@
 
 <script setup>
 import { withBase } from 'vitepress'
+import { computed } from 'vue'
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -35,4 +41,7 @@ defineProps({
     required: true,
   },
 })
+
+const isExternal = computed(() => /^[a-z][a-z0-9+.-]*:/i.test(props.href) || props.href.startsWith('//'))
+const linkHref = computed(() => (isExternal.value ? props.href : withBase(props.href)))
 </script>
