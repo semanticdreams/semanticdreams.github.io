@@ -175,9 +175,8 @@ if [ -z "$since_ts" ]; then
   exit 1
 fi
 
-awk -F, -v since_ts="$since_ts" '
+awk -F, -v since_ts="$(date -d "$SINCE_TIMESTAMP" +%s)" -v limit="$LIMIT_GB" '
   function to_epoch(t) {
-    # Convert ISO8601 timestamps to seconds since epoch
     gsub(/T/, " ", t)
     sub(/\+.*$/, "", t)
     cmd = "date -d \"" t "\" +%s"
@@ -203,28 +202,15 @@ awk -F, -v since_ts="$since_ts" '
       }
     }
   }
-  END { print rx, tx }
-' "$FILE" | {
-  read rx_sum tx_sum
-  total_bytes=$((rx_sum + tx_sum))
-
-  gb_total=$(awk -v t="$total_bytes" 'BEGIN {printf "%.3f", t / (1024^3)}')
-  gb_rx=$(awk -v r="$rx_sum" 'BEGIN {printf "%.3f", r / (1024^3)}')
-  gb_tx=$(awk -v t="$tx_sum" 'BEGIN {printf "%.3f", t / (1024^3)}')
-
-  remaining=$(awk -v limit="$LIMIT_GB" -v used="$gb_total" 'BEGIN {printf "%.3f", limit - used}')
-
-  #echo "SSID: $SSID"
-  #echo "Date range: from $SINCE_TIMESTAMP"
-  #echo "Limit: $LIMIT_GB GB"
-  #echo "Used: $gb_total GB"
-  #echo "Remaining: $remaining GB"
-  #echo ""
-  #echo "Breakdown:"
-  #echo "  RX: ${gb_rx} GB"
-  #echo "  TX: ${gb_tx} GB"
-  echo $remaining GB
-}
+  END {
+    total = rx + tx
+    gb_rx = rx / (1024^3)
+    gb_tx = tx / (1024^3)
+    gb_total = total / (1024^3)
+    remaining = limit - gb_total
+    printf "%.3f GB\n", remaining
+  }
+' "$FILE"
 ```
 
 To show output on Xfce panel, add `Generic Monitor` item to panel and set command `wifi-usage MyHotspot 10 2025-10-15T22:30` in its properties. First number, 10, is the limit from which used GBs are subtracted, the following date is the start date from which usage should be considered.
