@@ -1,7 +1,7 @@
 ---
 title: Resources for Psychedelic Science
 date: 2025-08-24
-description: Collection of resources related to psychedelic science.
+description:
 ---
 
 # Resources for Psychedelic Science
