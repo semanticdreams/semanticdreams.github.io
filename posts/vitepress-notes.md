@@ -1,6 +1,6 @@
 ---
 title: VitePress Notes
-description: Notes and links for working with VitePress.
+description:
 date: 2025-08-23
 ---
 
