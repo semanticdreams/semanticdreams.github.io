@@ -1,6 +1,6 @@
 ---
 title: OOP Patterns in Fennel
-description: Various ways of doing OOP in Fennel.
+description:
 date: 2025-08-24
 ---
 
