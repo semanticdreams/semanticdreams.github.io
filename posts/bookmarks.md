@@ -1,6 +1,6 @@
 ---
 title: Bookmarks
-description: Collection of links for reference.
+description:
 date: 2025-08-23
 ---
 
@@ -23,3 +23,7 @@ date: 2025-08-23
 ## Sailing
 
 <https://100r.co/site/home.html>  
+
+## Educational
+
+<https://neal.fun/space-elevator/>  
