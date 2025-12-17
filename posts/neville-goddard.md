@@ -1,6 +1,6 @@
 ---
-title: Neville Goddard
-description: Neville Goddard's mystical teachings.
+title: Neville Goddard's mystical teachings
+description:
 date: 2025-09-11
 ---
 

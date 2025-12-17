@@ -1,6 +1,6 @@
 ---
-title: Custom Multi-Language XKB Keyboard Layouts
-description: Dvorak-based multi-language XKB keyboard layouts for latin and cyrillic alphabets.
+title: Custom Dvorak-based Multi-Language XKB Keyboard Layouts
+description:
 date: 2025-08-28
 ---
 
