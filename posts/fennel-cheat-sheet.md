@@ -1,6 +1,6 @@
 ---
 title: Fennel Cheat Sheet
-description: Summary of Fennel syntax, functions and macros for quick lookup.
+description:
 date: 2025-08-23
 ---
 
