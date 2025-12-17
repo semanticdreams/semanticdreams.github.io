@@ -2,8 +2,6 @@
 
 ![Logo](/logo.png)
 
-Posts are incrementally updated notes.
-
 ## Contact
 
 Email: <a href='mailto:hello@semanticdreams.com'>hello@semanticdreams.com</a>
